@@ -1,4 +1,5 @@
+require("dotenv").config();
 module.exports = {
-    mongoURI: "mongodb://localhost:27017/CryptoVero",
-    secretOrKey: "86gylEkWoi2c5PPN"
+    mongoURI: `mongodb+srv://thomas:${process.env.DB_PASSWORD}@cluster0.bcamklc.mongodb.net/test`,
+    secretOrKey: "secret"
 };
