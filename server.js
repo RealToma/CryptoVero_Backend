@@ -10,6 +10,7 @@ const cors = require("cors");
 
 const AuthController = require('./Controllers/Auth');
 const TradingController = require('./Controllers/Trading');
+const KrakenController = require('./Controllers/Kraken');
 // connects our back end code with the database
 const config = require("./config/key");
 
@@ -32,6 +33,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/api/auth', AuthController);
 app.use('/api/trading', TradingController);
+app.use('/api/kraken', KrakenController);
 
 app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
 
